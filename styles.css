@@ -212,32 +212,55 @@ nav a:hover {
 /* grid-container */
 
 .grid-container {
+  background-color: #f9e8a7;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  top: 5rem;
+  justify-content: center;
+  height: auto;
+  min-height: 200px;
+  overflow: hidden;
 }
 
 .bristol-photo {
-  margin: 1.5rem;
-  display: flex;
-  align-items: flex-end;
-  height: 21.875rem;
-  flex: 1 3 21.875rem;
-}
-
-.bristol-photo h3 {
-  width: 100%;
-  opacity: 0.8;
-  padding: 1.5rem;
+  width: 20rem;
+  height: 20rem;
+  min-height: 200px;
+  margin: 5% 1%;
   text-align: center;
-  background-color: black;
-  color: ghostwhite;
-  display: none;
+  text-decoration: none;
+  color: rgba(61, 60, 60, 0.699);
+  position: relative;
 }
 
-.bristol-photo:hover h3 {
+ .overlay {
+  position: absolute;
+  height: 0;
+  width: 80%;
+  bottom: -20px;
+  left: 10%;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  transition: height 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.overlay h3 {
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+.bristol-photo:hover .overlay {
+  height: 55%;
+  opacity: 0.8;
+}
+
+.bristol-photo:hover .overlay h3 {
+  background-color: rgba(27, 27, 27, 0.7);
+  padding: 5% 5%;
+  margin: 0% 5%;
+  border-radius: 10px 100px / 120px;
   display: block;
+  opacity: 1;
 }
 
 #balloon {
