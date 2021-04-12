@@ -232,7 +232,7 @@ nav a:hover {
   position: relative;
 }
 
- .overlay {
+.overlay {
   position: absolute;
   height: 0;
   width: 80%;
@@ -245,12 +245,12 @@ nav a:hover {
 }
 
 .overlay h3 {
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 
 .bristol-photo:hover .overlay {
-  height: 55%;
+  height: 30%;
   opacity: 0.8;
 }
 
@@ -296,7 +296,7 @@ nav a:hover {
 }
 
 .social-media img {
-  height: 3.5rem;
+  height: 2.5rem;
   width: auto;
   margin: 2rem;
 }
@@ -368,5 +368,15 @@ footer p {
 
   nav a:hover::before {
     transform: scale(1, 1);
+  }
+}
+
+@media all and (max-width: 500px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  footer p {
+    font-size: 0.5rem;
   }
 }
